@@ -1,0 +1,72 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+class matrizb{
+    private:
+
+
+    public:
+
+
+    float B(int a, int b, int c, int d, int e, int f, int g, int h){
+    float resposta;
+    resposta = (a * 0,1) + (b * 0,15) + (c * 0,1) + (d * 0,15) + (e * 0,15) + (f * 0,1) + (g * 0,15) + (h * 0,1);
+    return resposta;
+    }
+
+};
+
+int main()
+{
+    int a, t, i, j, ce, c, cd, e, d, be, b, bd, temp;
+    matrizb BB;
+    cout << "Insira no numero de linhas (e consequentemente de colunas) da sua matriz" << endl;
+    cin >> a;
+    int A[a][a], B[a][a];
+    t = a + 1;
+    int T[t][t];
+
+    for (i=0; i<=t; i++){
+        for (j=0; j<=t; j++){
+            T[i][j] = '0';
+        }
+    }
+
+    a = a - 1;
+    for (i=0; i<=a; i++){
+        for (j=0; j <=a; j++){
+            cout << "insira a informacao da " << (i+1) << " linha e " << (j+1) << " coluna" << endl;
+            cin >> A[i][j];
+            T[i+1][j+1] = A[i][j];
+        }
+        cout << endl;
+    }
+    system ("pause");
+    system ("cls");
+    t = t - 1;
+    for (i=1; i<=t; i++){
+        for (j=1; j<=t; j++){
+            ce = T[i-1][j-1];
+            c = T[i-1][j];
+            cd = T[i-1][j+1];
+            e = T[i][j-1];
+            d = T[i][j+1];
+            be = T[i+1][j-1];
+            b = T[i+1][j];
+            bd = T[i+1][j+1];
+            temp = BB.B(ce, c, cd, e, d, be, b, bd);
+
+        }
+
+    }
+
+    for (i=0; i<=a; i++){
+        for (j=0; j<=a; j++){
+        cout << A[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
