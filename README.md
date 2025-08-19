@@ -1,2 +1,3 @@
 # Topicos-computacao
-Criado apenas para fazer upload da prova de tópicos
+
+O objetivo desse repositório foi desenvolver o de desenvolver o projeto final da disciplina de "Tópicos em computação" da Universidade de São Paulo - USP.
